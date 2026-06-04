@@ -23,6 +23,10 @@
         html {
             scroll-behavior: smooth;
         }
+
+        #dropdown{
+            display: none;
+        }
     </style>
 </head>
 
@@ -34,6 +38,32 @@
         <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-skyBlue"></div>
     </div>
 
+    <header class="sticky top-0 z-40 glass w-full transition-all duration-300 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+            <a href="index.html" class="flex items-center space-x-2 text-2xl font-bold bg-linear-to-r from-skyBlue to-tealAccent bg-clip-text text-transparent">
+                <i class="fa-solid fa-earth-americas text-skyBlue"></i>
+                <span>Roamify</span>
+            </a>
+
+            <nav class="hidden md:flex space-x-8 items-center font-medium">
+                <a href="index.html" class="text-skyBlue hover:text-tealAccent transition-colors">Home</a>
+
+                <div class="relative group" id="menu">
+
+                    <a href="destinations.html" class="hover:text-skyBlue flex items-center space-x-1 py-2">
+                        <span>Destinations</span> <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full left-0 w-48 bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-slate-100 dark:border-slate-700 p-2 space-y-1" id="dropdown">
+                        <a href="destinations.html?cat=mountains" class="block px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">Mountains</a>
+                        <a href="destinations.html?cat=beaches" class="block px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">Beaches</a>
+                        <a href="destinations.html?cat=historical" class="block px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">Historical Places</a>
+                        <a href="destinations.html?cat=adventure" class="block px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">Adventure Trips</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
 
 
     <script src="Assets/JavaScript/script.js"></script>
