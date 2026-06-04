@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,20 +14,29 @@
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.25);
         }
+
         .dark .glass {
             background: rgba(15, 23, 42, 0.45);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        html { scroll-behavior: smooth; }
+
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
+
 <body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 font-sans transition-colors duration-300">
 
     <!-- site loading -->
-    <div id="loadingSite">
+    <div id="loader"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900 text-white transition-opacity duration-500">
         <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-skyBlue"></div>
     </div>
 
+
+
     <script src="Assets/JavaScript/script.js"></script>
 </body>
+
 </html>
