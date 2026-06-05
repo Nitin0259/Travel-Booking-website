@@ -23,7 +23,6 @@
         html {
             scroll-behavior: smooth;
         }
-
     </style>
 </head>
 
@@ -38,7 +37,8 @@
     <header class="sticky top-0 z-40 glass w-full transition-all duration-300 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
 
-            <a href="index.html" class="flex items-center space-x-2 text-2xl font-bold bg-linear-to-r from-skyBlue to-tealAccent bg-clip-text text-transparent">
+            <a href="index.html"
+                class="flex items-center space-x-2 text-2xl font-bold bg-linear-to-r from-skyBlue to-tealAccent bg-clip-text text-transparent">
                 <i class="fa-solid fa-earth-americas text-skyBlue"></i>
                 <span>Roamify</span>
             </a>
@@ -48,33 +48,63 @@
 
                 <div class="relative group menus">
                     <a href="Assets/destinations.html" class="hover:text-skyBlue flex items-center space-x-1 py-2">
-                        <span>Destinations</span> <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                        <span>Destinations</span> <i
+                            class="fa-solid fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
                     </a>
-                    <div class="dropdown-menus hidden absolute top-full left-0 w-48 bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-slate-100 dark:border-slate-700 p-2 space-y-1">
-                        <a href="destinations.html?cat=mountains" class="block px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">Mountains</a>
-                        <a href="destinations.html?cat=beaches" class="block px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">Beaches</a>
-                        <a href="destinations.html?cat=historical" class="block px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">Historical Places</a>
-                        <a href="destinations.html?cat=adventure" class="block px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">Adventure Trips</a>
+                    <div
+                        class="dropdown-menus hidden absolute top-full left-0 w-48 bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-slate-100 dark:border-slate-700 p-2 space-y-1">
+                        <a href="destinations.html?cat=mountains"
+                            class="block px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">Mountains</a>
+                        <a href="destinations.html?cat=beaches"
+                            class="block px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">Beaches</a>
+                        <a href="destinations.html?cat=historical"
+                            class="block px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">Historical
+                            Places</a>
+                        <a href="destinations.html?cat=adventure"
+                            class="block px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">Adventure
+                            Trips</a>
                     </div>
                 </div>
 
                 <div class="relative group menus">
                     <a href="Assets/packages.html" class="hover:text-skyBlue flex items-center space-x-1 py-2">
-                        <span>Packages</span> <i class="fa-solid fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                        <span>Packages</span> <i
+                            class="fa-solid fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
                     </a>
-                    <div class="dropdown-menus hidden absolute top-full left-0 w-48 bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-slate-100 dark:border-slate-700 p-2 space-y-1">
-                        <a href="Assets/packages.html?type=solo" class="block px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">Solo Travel</a>
-                        <a href="Assets/packages.html?type=family" class="block px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">Family Tours</a>
-                        <a href="Assets/packages.html?type=honeymoon" class="block px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">Honeymoon</a>
-                        <a href="Assets/packages.html?type=group" class="block px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">Group Tours</a>
+                    <div
+                        class="dropdown-menus hidden absolute top-full left-0 w-48 bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-slate-100 dark:border-slate-700 p-2 space-y-1">
+                        <a href="Assets/packages.html?type=solo"
+                            class="block px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">Solo
+                            Travel</a>
+                        <a href="Assets/packages.html?type=family"
+                            class="block px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">Family
+                            Tours</a>
+                        <a href="Assets/packages.html?type=honeymoon"
+                            class="block px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">Honeymoon</a>
+                        <a href="Assets/packages.html?type=group"
+                            class="block px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">Group
+                            Tours</a>
                     </div>
                 </div>
                 <a href="Assets/about.html" class="hover:text-skyBlue transition-colors">About</a>
                 <a href="Assets/contact.html" class="hover:text-skyBlue transition-colors">Contact</a>
             </nav>
             <div class="hidden md:flex items-center space-x-4">
-                <button id="myToggleBtn" class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 text-xl transition-colors">
-                    <i class="fa-solid" :class="darkMode ? 'fa-sun text-yellow-400' : 'fa-moon text-slate-600'"></i>
+                <button id="myToggleBtn"
+                    class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 text-xl transition-colors">
+                    <i id="theme_icon" class="fa-solid fa-moon text-slate-600"></i>
+                </button>
+                <a href="Assets/packages.html"
+                    class="bg-linear-to-r from-skyBlue to-tealAccent text-white px-5 py-2.5 rounded-full font-medium hover:opacity-90 shadow-md transition-opacity">Book
+                    Now</a>
+            </div>
+
+            <div class="flex items-center space-x-4 md:hidden">
+                <button id="myToggleBtn" class="p-2 text-lg">
+                    <i id="theme_icon" class="fa-solid fa-moon text-slate-600"></i>
+                </button>
+                <button id="menu-btn" class="text-2xl focus:outline-none">
+                    <i id="menu-icon" class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
