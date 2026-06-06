@@ -90,9 +90,9 @@
                 <a href="Assets/contact.html" class="hover:text-skyBlue transition-colors">Contact</a>
             </nav>
             <div class="hidden md:flex items-center space-x-4">
-                <button id="myToggleBtn"
+                <button class="myToggleBtn"
                     class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 text-xl transition-colors">
-                    <i id="theme_icon" class="fa-solid fa-moon text-slate-600"></i>
+                    <i class="fa-solid fa-moon theme_icon text-slate-600"></i>
                 </button>
                 <a href="Assets/packages.html"
                     class="bg-linear-to-r from-skyBlue to-tealAccent text-white px-5 py-2.5 rounded-full font-medium hover:opacity-90 shadow-md transition-opacity">Book
@@ -100,12 +100,21 @@
             </div>
 
             <div class="flex items-center space-x-4 md:hidden">
-                <button id="myToggleBtn" class="p-2 text-lg">
-                    <i id="theme_icon" class="fa-solid fa-moon text-slate-600"></i>
+                <button class="myToggleBtn p-2 text-lg">
+                    <i class="fa-solid fa-moon theme_icon text-slate-600"></i>
                 </button>
                 <button id="menu-btn" class="text-2xl focus:outline-none">
                     <i id="menu-icon" class="fa-solid fa-bars"></i>
                 </button>
+            </div>
+
+            <div id="mobile-menu" class="absolute top-20 left-0 w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 p-6 space-y-4 md:hidden flex flex-col shadow-xl">
+                <a href="index.html" class="text-skyBlue font-semibold">Home</a>
+                <a href="Assets/destinations.html" class="font-medium">Destinations</a>
+                <a href="Assets/packages.html" class="font-medium">Packages</a>
+                <a href="Assets/about.html" class="font-medium">About Us</a>
+                <a href="Assets/contact.html" class="font-medium">Contact Us</a>
+                <a href="Assets/packages.html" class="bg-skyBlue text-white text-center py-2.5 rounded-xl font-medium">Book Your Trip</a>
             </div>
         </div>
     </header>

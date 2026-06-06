@@ -21,33 +21,41 @@ document.querySelectorAll(".menus").forEach(menuItem => {
     menuItem.addEventListener("mouseleave", () => {
         dropdown.classList.add("hidden")
     })
-
 })
 
 // dark-light mode btn
-const btn = document.getElementById("myToggleBtn")
-const toggle = document.getElementById("theme_icon")
+document.querySelectorAll(".myToggleBtn").forEach(toggleBtn => {
 
-btn.addEventListener("click", () => {
-    document.documentElement.classList.toggle("dark")
+    toggleBtn.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark")
 
-    if(document.documentElement.classList.contains("dark")) {
-        toggle.classList.remove("fa-moon", "text-slate-600")
-        toggle.classList.add("fa-sun", "text-yellow-400")
-    }
-    else{
-        toggle.classList.remove("fa-sun", "text-yellow-400")
-        toggle.classList.add("fa-moon", "text-slate-600")
-    }
+        document.querySelectorAll(".theme_icon").forEach(icon => {
+            if (document.documentElement.classList.contains("dark")) {
+                icon.classList.remove("fa-moon", "text-slate-600")
+                icon.classList.add("fa-sun", "text-yellow-400")
+            }
+            else {
+                icon.classList.remove("fa-sun", "text-yellow-400")
+                icon.classList.add("fa-moon", "text-slate-600")
+            }
+        })
+    })
 })
 
-// Menu-bar
+// Mobile-menu-bar
 const menu_btn = document.getElementById("menu-btn")
 const menu_icon = document.getElementById("menu-icon")
+const mobileMenu = document.getElementById("mobile-menu")
 
 menu_btn.addEventListener("click", () => {
-    menu_icon.classList.toggle("fa-bars")
-    menu_icon.classList.toggle("fa-xmark")
+   mobileMenu.classList.toggle("hidden");
+
+   if(mobileMenu.classList.contains("hidden")){
+    menu_icon.classList.replace("fa-xmark", "fa-bars")
+   }
+   else{
+    menu_icon.classList.replace("fa-bars", "fa-xmark")
+   }
 })
 
 
