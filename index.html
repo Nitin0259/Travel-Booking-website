@@ -34,7 +34,7 @@
         <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-skyBlue"></div>
     </div>
 
-    <header class="sticky top-0 z-40 glass w-full transition-all duration-300 shadow-sm">
+    <header class="sticky top-0 z-40 w-full glass transition-all duration-300 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
 
             <a href="index.html"
@@ -90,8 +90,8 @@
                 <a href="Assets/contact.html" class="hover:text-skyBlue transition-colors">Contact</a>
             </nav>
             <div class="hidden md:flex items-center space-x-4">
-                <button class="myToggleBtn"
-                    class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 text-xl transition-colors">
+                <button
+                    class="myToggleBtn cursor-pointer p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 text-xl transition-colors">
                     <i class="fa-solid fa-moon theme_icon text-slate-600"></i>
                 </button>
                 <a href="Assets/packages.html"
@@ -108,16 +108,117 @@
                 </button>
             </div>
 
-            <div id="mobile-menu" class="absolute top-20 left-0 w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 p-6 space-y-4 md:hidden flex flex-col shadow-xl">
+            <div id="mobile-menu"
+                class="absolute top-20 left-0 w-full bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 p-6 space-y-4 md:hidden flex flex-col shadow-xl">
                 <a href="index.html" class="text-skyBlue font-semibold">Home</a>
                 <a href="Assets/destinations.html" class="font-medium">Destinations</a>
                 <a href="Assets/packages.html" class="font-medium">Packages</a>
                 <a href="Assets/about.html" class="font-medium">About Us</a>
                 <a href="Assets/contact.html" class="font-medium">Contact Us</a>
-                <a href="Assets/packages.html" class="bg-skyBlue text-white text-center py-2.5 rounded-xl font-medium">Book Your Trip</a>
+                <a href="Assets/packages.html"
+                    class="bg-skyBlue text-white text-center py-2.5 rounded-xl font-medium">Book Your Trip</a>
             </div>
         </div>
     </header>
+
+    <!-- Hero section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden bg-slate-900">
+        <img src="Assets/Images/image1.avif" alt="Hero Beach"
+            class="absolute inset-0 w-full h-full object-cover opacity-60">
+        <div class="absolute inset-0 bg-linear-to-b from-transparent to-slate-950/80"></div>
+
+        <div class="relative max-w-5xl mx-auto px-4 text-center text-white z-10 space-y-8">
+            <h1
+                class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight transform translate-y-0 transition duration-1000">
+                Discover Your Next <span
+                    class="bg-linear-to-r from-skyBlue via-tealAccent to-orangeAccent bg-clip-text text-transparent animate-pulse">Epic
+                    Adventure</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-200 max-w-2xl mx-auto">
+                Explore luxury packages, hidden gems, and custom-tailored itineraries designed completely around your
+                wanderlust.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="Assets/destinations.html"
+                    class="bg-skyBlue hover:bg-sky-600 px-8 py-3 rounded-full font-semibold shadow-lg transition transform hover:-translate-y-1">Explore
+                    Now</a>
+                <a href="Assets/packages.html"
+                    class="bg-white/20 backdrop-blur-md hover:bg-white/30 border border-white/40 px-8 py-3 rounded-full font-semibold shadow-lg transition transform hover:-translate-y-1">Book
+                    Your Trip</a>
+            </div>
+
+            <div
+                class="max-w-4xl mx-auto mt-12 bg-white dark:bg-slate-800 p-4 sm:p-6 rounded-2xl shadow-2xl text-slate-800 dark:text-white glass border border-white/20 text-left">
+                <form action="Assets/destinations.html" class="grid grid-cols-1 md:grid-cols-4 gap-4" method="get">
+                    <div>
+                        <label
+                            class="block text-xs font-bold uppercase tracking-wide text-slate-700 dark:text-slate-400 mb-1">Where
+                            to?</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-location-dot absolute left-3 top-3.5 text-skyBlue"></i>
+                            <input type="text" placeholder="Country, City..."
+                                class="w-full bg-slate-100 dark:bg-slate-700/50 pl-9 pr-3 py-2.5 rounded-xl border border-transparent focus:border-skyBlue focus:outline-none text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label
+                            class="block text-xs font-bold uppercase tracking-wide text-slate-700 dark:text-slate-400 mb-1">Type</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-person-hiking absolute left-3 top-3.5 text-skyBlue"></i>
+                            <select
+                                class="w-full bg-slate-100 dark:bg-slate-700/50 pl-9 pr-3 py-2.5 rounded-xl border border-transparent focus:border-skyBlue focus:outline-none text-sm appearance-none">
+                                <option>All Categories</option>
+                                <option>Mountains</option>
+                                <option>Beaches</option>
+                                <option>Historical</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label
+                            class="block text-xs font-bold uppercase tracking-wide text-slate-700 dark:text-slate-400 mb-1">When?</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-calendar absolute left-3 top-3.5 text-skyBlue"></i>
+                            <input type="date"
+                                class="w-full bg-slate-100 dark:bg-slate-700/50 pl-9 pr-3 py-2.5 rounded-xl border border-transparent focus:border-skyBlue focus:outline-none text-sm">
+                        </div>
+                    </div>
+                    <div class="flex items-end">
+                        <button type="submit"
+                            class="w-full bg-linear-to-r from-skyBlue to-tealAccent hover:opacity-90 text-white font-semibold py-2.5 rounded-xl shadow transition flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span>Search</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-tealAccent font-bold tracking-widest uppercase text-sm block mb-2">Inspiration</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold">Popular Destinations</h2>
+            <div class="h-1 w-20 bg-skyBlue mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid  grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="group bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition duration-500 transform hover:-translate-y-2">
+                <div class="relative overflow-hidden h-64">
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80" alt="Bali" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <span class="absolute top-4 right-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-orangeAccent"><i class="fa-solid fa-star"></i> 4.9</span>
+                </div>
+                <div class="p-6 space-y-3">
+                    <h3 class="text-xl font-bold group-hover:text-skyBlue transition-colors">Bali, Indonesia</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2">Tropical shores, dynamic volcanic landscapes, and ancient heritage shrines await exploration.</p>
+                    <div class="flex justify-between items-center pt-4 border-t border-slate-100 dark:border-slate-700">
+                        <span class="text-slate-400 text-sm"><i class="fa-solid fa-clock"></i> 5 Days</span>
+                        <span class="text-xl font-extrabold text-skyBlue">$850</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <script src="Assets/JavaScript/script.js"></script>
