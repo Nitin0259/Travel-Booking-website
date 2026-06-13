@@ -49,14 +49,14 @@ const menu_icon = document.getElementById("menu-icon")
 const mobileMenu = document.getElementById("mobile-menu")
 
 menu_btn.addEventListener("click", () => {
-   mobileMenu.classList.toggle("hidden");
+    mobileMenu.classList.toggle("hidden");
 
-   if(mobileMenu.classList.contains("hidden")){
-    menu_icon.classList.replace("fa-xmark", "fa-bars")
-   }
-   else{
-    menu_icon.classList.replace("fa-bars", "fa-xmark")
-   }
+    if (mobileMenu.classList.contains("hidden")) {
+        menu_icon.classList.replace("fa-xmark", "fa-bars")
+    }
+    else {
+        menu_icon.classList.replace("fa-bars", "fa-xmark")
+    }
 })
 
 // Testimonials
@@ -72,7 +72,7 @@ buttons.forEach(button => {
         testimonilas.forEach(item => {
             item.classList.add("hidden")
         })
-   
+
         // Show active testimonial
         document.getElementById(`testimonial-${activeTab}`).classList.remove("hidden")
 
@@ -87,5 +87,36 @@ buttons.forEach(button => {
     })
 })
 
+// subscribeForm 
+    const subscribeForm = document.getElementById("subscribeForm")
 
+    subscribeForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+    alert("Thank you for subscribing!");
 
+    subscribeForm.reset();
+});
+
+// scrollToTop button
+const scrollbtn = document.getElementById("scrollTopBtn")
+
+window.addEventListener("scroll", () => {
+    if(window.pageYOffset > 500) {
+        scrollbtn.classList.remove("hidden")
+    }
+    else{
+        scrollbtn.classList.add("hidden")
+    }
+})
+
+// Go To Top
+scrollbtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+})
+
+// Serach Filter
+let filter = "all";
+let search = "";
