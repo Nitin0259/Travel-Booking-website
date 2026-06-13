@@ -59,7 +59,33 @@ menu_btn.addEventListener("click", () => {
    }
 })
 
+// Testimonials
+let activeTab = 0;
 
+const testimonilas = document.querySelectorAll('.testimonial');
+const buttons = document.querySelectorAll(".testimonial-btn");
+
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        activeTab = Number(button.dataset.tab)
+
+        testimonilas.forEach(item => {
+            item.classList.add("hidden")
+        })
+   
+        // Show active testimonial
+        document.getElementById(`testimonial-${activeTab}`).classList.remove("hidden")
+
+        // Update button styles
+        buttons.forEach(btn => {
+            btn.classList.remove("bg-skyBlue", "w-6")
+            btn.classList.add("bg-slate-300", "dark:bg-slate-600", "w-2")
+        })
+
+        button.classList.remove("bg-slate-300", "dark:bg-slate-600", "w-2")
+        button.classList.add("bg-skyBlue", "w-6")
+    })
+})
 
 
 
